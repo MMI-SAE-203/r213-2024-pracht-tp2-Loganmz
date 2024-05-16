@@ -6,6 +6,8 @@ onErrorCaptured((err, instance, info) => {
   console.error('erreur : ', err, '\ninfo : ', info, '\ncomposant : ', instance)
   return true
 })
+
+
 </script>
 
 <template>
