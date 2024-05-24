@@ -1,6 +1,9 @@
 <script setup lang="ts">
- import type { MaisonRecord } from '@/pocketbase-types'
-  defineProps<MaisonRecord>()
+import ImgPb from './ImgPb.vue'
+ import type { MaisonResponse } from '@/pocketbase-types'
+const props = defineProps<MaisonResponse<any>>()
+  
+ 
  
 </script>
 
@@ -12,8 +15,8 @@
     <div
       class="w-[352px] h-[200px] absolute left-[-0.5px] top-[-0.5px] rounded-tl-lg rounded-tr-lg bg-gray-500"
     ></div>
-    <img
-      src=""
+    <ImgPb :record="props"
+     :filename="Image" :width="387" :height="235"
       class="w-[352px] h-[235px] absolute left-[-0.5px] top-[-24.5px] object-cover"
     />
   </div>
@@ -40,7 +43,7 @@
         width="48"
         height="48"
         viewBox="0 0 48 48"
-        fill="none"
+        :fill="Favori?'red':'none'"
         xmlns="http://www.w3.org/2000/svg"
         class="flex-grow-0 flex-shrink-0 w-12 h-12"
         preserveAspectRatio="xMidYMid meet"

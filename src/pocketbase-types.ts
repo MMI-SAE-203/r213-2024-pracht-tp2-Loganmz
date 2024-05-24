@@ -45,7 +45,7 @@ export type AgentsRecord = {
 export type MaisonRecord = {
 	Adresse?: string
 	Favori?: boolean
-	Images?: string
+	Image?: string
 	Nom_de_la_maison?: string
 	Nombre_de_chambres?: number
 	Nombre_de_salles_de_bain?: number
